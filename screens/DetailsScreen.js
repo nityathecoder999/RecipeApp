@@ -83,9 +83,7 @@ const DetailsScreen = (props) => {
             <TouchableOpacity onPress={()=>{navigation.goBack()}} className="p-2 rounded-full ml-5 bg-white">
                 <ChevronLeftIcon size={hp(3.5)} strokeWidth={4.5} color="#fbbf24"></ChevronLeftIcon>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{setIsFavourite(!isFavourite)}} className="p-2 rounded-full mr-5 bg-white">
-                <HeartIcon size={hp(3.5)} strokeWidth={4.5} color= {isFavourite?"red":"gray"}></HeartIcon>
-            </TouchableOpacity>
+          
 
         </Animated.View>
      {loading?(
@@ -101,7 +99,7 @@ const DetailsScreen = (props) => {
             </Text>
             </Animated.View>
             <Animated.View entering={FadeInDown.delay(100).duration(700).springify().damping(12)} className="flex-row justify-around">
-                <View className="flex rounded-full bg-amber-300 p-2">
+                <View className="flex rounded-full  p-2" style={{backgroundColor:'#A2CA71'}}>
                     <View
                      style={{heigh:hp(6.6), width:hp(6.5)}}
                      className="bg-white rounded-full flex items-center justify-center"
@@ -119,7 +117,7 @@ const DetailsScreen = (props) => {
                     </View>
 
                 </View>
-                <View className="flex rounded-full bg-amber-300 p-2">
+                <View className="flex rounded-full p-2" style={{backgroundColor:'#A2CA71'}}>
                     <View
                      style={{heigh:hp(6.6), width:hp(6.5)}}
                      className="bg-white rounded-full flex items-center justify-center"
@@ -137,7 +135,7 @@ const DetailsScreen = (props) => {
                     </View>
 
                 </View>
-                <View className="flex rounded-full bg-amber-300 p-2">
+                <View className="flex rounded-full  p-2" style={{backgroundColor:'#A2CA71'}}>
                     <View
                      style={{heigh:hp(6.6), width:hp(6.5)}}
                      className="bg-white rounded-full flex items-center justify-center"
@@ -155,7 +153,7 @@ const DetailsScreen = (props) => {
                     </View>
 
                 </View>
-                <View className="flex rounded-full bg-amber-300 p-2">
+                <View className="flex rounded-full  p-2" style={{backgroundColor:'#A2CA71'}}>
                     <View
                      style={{heigh:hp(6.6), width:hp(6.5)}}
                      className="bg-white rounded-full flex items-center justify-center"
@@ -183,7 +181,7 @@ const DetailsScreen = (props) => {
                         ingredientsIndexes(meal).map(i=>{
                             return(
                                 <View key={i} className="flex-row space-x-4">
-                                    <View style={{height:hp(1.5), width:hp(1.5)}} className="bg-amber-300 rounded-full"></View>
+                                    <View style={{height:hp(1.5), width:hp(1.5), backgroundColor:'#A2CA71'}} className=" rounded-full"></View>
                                         <View className="flex-row space-x-2">
                                            
                                             <Text style={{fontSize:hp(1.7)}} className="font-extrabold text-neutral-700">{meal['strMeasure'+i]}</Text>
